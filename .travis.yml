@@ -17,7 +17,7 @@ cache:
     - $HOME/.cache/electron-builder
 
 script:
-  - echo 'no action on pushing branch'
+  - echo 'no action on regular hook'
 
 deploy:
   - provider: script
