@@ -1,6 +1,6 @@
 {
   "name": "org.vechain.sync",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "author": "vechain.org",
   "description": "An electron-vue project",
   "license": "LGPL-3.0",
