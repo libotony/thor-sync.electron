@@ -19,9 +19,7 @@ build_script:
 
 deploy_script:
   - ps: |
-    if ($env:APPVEYOR_REPO_TAG -ne "true") {
-      return
-    }
-    npm run build
+      if ($env:APPVEYOR_REPO_TAG -ne "true") {return}
+      npm run build
 
 test: off
