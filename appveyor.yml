@@ -21,5 +21,8 @@ deploy_script:
   - ps: |
       if ($env:APPVEYOR_REPO_TAG -ne "true") {return}
       npm run build
+      if ($LASTEXITCODE -eq 0) {
+        $host.SetShouldExit(0)
+      }
 
 test: off
