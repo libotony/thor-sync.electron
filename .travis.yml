@@ -19,9 +19,6 @@ cache:
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
 
-script:
-  - npm run pack
-
 deploy:
   - provider: script
     script: npm run build
