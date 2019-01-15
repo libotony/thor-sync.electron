@@ -25,5 +25,6 @@ script:
 deploy:
   - provider: script
     script: npm run build
+    skip_cleanup: true
     on:
       tags: true
