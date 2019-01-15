@@ -19,6 +19,9 @@ cache:
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
 
+script:
+  - echo 'no action on pushing branch'
+
 deploy:
   - provider: script
     script: npm run build
