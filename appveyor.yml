@@ -16,6 +16,7 @@ install:
 
 build_script:
   - ps: |
+      npm i npm@latest -g
       npm -v
       npm run build
       # trick for ci recognize DeprecationWarning as error
