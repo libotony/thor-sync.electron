@@ -17,7 +17,7 @@
     "pack:preload": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.preload.config.js",
     "test": "npm run unit && npm run e2e",
     "unit": "karma start test/unit/karma.conf.js",
-    "postinstall": "electron-rebuild"
+    "postinstall": "electron-builder install-app-deps"
   },
   "build": {
     "productName": "Sync",
@@ -177,8 +177,5 @@
     "webpack-dev-server": "^2.7.1",
     "webpack-hot-middleware": "^2.18.2",
     "webpack-merge": "^4.1.0"
-  },
-  "engines" : { 
-    "npm" : ">= 6.13.7" 
-  } 
+  }
 }

@@ -12,12 +12,11 @@ init:
 
 install:
   - ps: Install-Product node 10 x64
+  - npm i npm@latest -g
   - npm ci
 
 build_script:
   - ps: |
-      npm i npm@latest -g
-      npm -v
       npm run build
       # trick for ci recognize DeprecationWarning as error
       if ($LASTEXITCODE -eq 0) {
