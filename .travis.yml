@@ -24,9 +24,6 @@ cache:
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
 
-before_install:
-  - sudo npm i -g npm@latest
-
 script:
   - npm ls node-gyp -g
   - npm run build
