@@ -26,10 +26,10 @@ cache:
 
 before_install:
   - npm install node-gyp@latest -g
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then npm_config_node_gyp="C:\ProgramData\nvs\node\10.19.0\x64\node_modules\node-gyp"    ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then echo $npm_config_node_gyp                                                          ; fi
 
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then npm_config_node_gyp="C:\ProgramData\nvs\node\10.19.0\x64\node_modules\npm\node_modules\node-gyp"    ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then echo $npm_config_node_gyp                                                                           ; fi
   - npm ls node-gyp -g
   - npm run build
 
